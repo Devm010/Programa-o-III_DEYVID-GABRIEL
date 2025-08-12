@@ -27,15 +27,17 @@ public class NewJFormulario1 extends javax.swing.JFrame {
 
         jButtonEnviar = new javax.swing.JButton();
         JnameTitulo = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButtonEnviar.setBackground(new java.awt.Color(0, 0, 0));
-        jButtonEnviar.setFont(new java.awt.Font("Arial Black", 3, 18)); // NOI18N
-        jButtonEnviar.setForeground(new java.awt.Color(76, 73, 169));
+        jButtonEnviar.setFont(new java.awt.Font("Arial Black", 3, 24)); // NOI18N
+        jButtonEnviar.setForeground(new java.awt.Color(255, 0, 51));
+        jButtonEnviar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconarchive-Dogecoin-To-The-Moon-Doge.48.png"))); // NOI18N
+        jButtonEnviar.setText("enviar");
         jButtonEnviar.setHideActionText(true);
         jButtonEnviar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButtonEnviar.setLabel("SEND");
         jButtonEnviar.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
         jButtonEnviar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -44,32 +46,55 @@ public class NewJFormulario1 extends javax.swing.JFrame {
         });
 
         JnameTitulo.setBackground(new java.awt.Color(0, 0, 0));
-        JnameTitulo.setFont(new java.awt.Font("Segoe Script", 0, 12)); // NOI18N
-        JnameTitulo.setForeground(new java.awt.Color(102, 102, 255));
-        JnameTitulo.setText("Clique aqui ");
+        JnameTitulo.setFont(new java.awt.Font("Segoe Script", 3, 18)); // NOI18N
+        JnameTitulo.setForeground(new java.awt.Color(255, 51, 51));
+        JnameTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Femfoyou-Angry-Birds-Angry-bird-black.64.png"))); // NOI18N
+        JnameTitulo.setText("SISTEMA DEYVID");
+
+        jTextField1.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
+        jTextField1.setForeground(new java.awt.Color(255, 0, 51));
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextField1.setText("aqui ->");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Femfoyou-Angry-Birds-Angry-bird.48.png"))); // NOI18N
+        jLabel1.setText("digite seu nome:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jTextField1)
+                .addGap(27, 27, 27)
+                .addComponent(jButtonEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addGap(24, 24, 24))
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(135, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButtonEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(117, 117, 117))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(JnameTitulo)
-                        .addGap(150, 150, 150))))
+                .addGap(101, 101, 101)
+                .addComponent(JnameTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(JnameTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(JnameTitulo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(121, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jTextField1)
+                        .addComponent(jButtonEnviar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap(109, Short.MAX_VALUE))
         );
 
         pack();
@@ -78,6 +103,10 @@ public class NewJFormulario1 extends javax.swing.JFrame {
     private void jButtonEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEnviarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonEnviarActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -117,5 +146,7 @@ public class NewJFormulario1 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel JnameTitulo;
     private javax.swing.JButton jButtonEnviar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
