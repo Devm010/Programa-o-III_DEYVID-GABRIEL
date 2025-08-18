@@ -27,18 +27,22 @@ public class NewJFormulario1 extends javax.swing.JFrame {
 
         jButtonEnviar = new javax.swing.JButton();
         JnameTitulo = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jTextFieldNome = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        jButtonLimpar = new javax.swing.JButton();
+        jLabelMostra = new javax.swing.JLabel();
+        jButtonSair = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButtonEnviar.setFont(new java.awt.Font("Arial Black", 3, 24)); // NOI18N
+        jButtonEnviar.setBackground(new java.awt.Color(255, 255, 51));
+        jButtonEnviar.setFont(new java.awt.Font("Arial Black", 3, 18)); // NOI18N
         jButtonEnviar.setForeground(new java.awt.Color(255, 0, 51));
         jButtonEnviar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconarchive-Dogecoin-To-The-Moon-Doge.48.png"))); // NOI18N
         jButtonEnviar.setText("enviar");
         jButtonEnviar.setHideActionText(true);
-        jButtonEnviar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButtonEnviar.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        jButtonEnviar.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jButtonEnviar.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jButtonEnviar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonEnviarActionPerformed(evt);
@@ -51,12 +55,12 @@ public class NewJFormulario1 extends javax.swing.JFrame {
         JnameTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Femfoyou-Angry-Birds-Angry-bird-black.64.png"))); // NOI18N
         JnameTitulo.setText("SISTEMA DEYVID");
 
-        jTextField1.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 0, 51));
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldNome.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
+        jTextFieldNome.setForeground(new java.awt.Color(255, 0, 51));
+        jTextFieldNome.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jTextFieldNomeActionPerformed(evt);
             }
         });
 
@@ -65,47 +69,114 @@ public class NewJFormulario1 extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Femfoyou-Angry-Birds-Angry-bird.48.png"))); // NOI18N
         jLabel1.setText("digite seu nome:");
 
+        jButtonLimpar.setBackground(new java.awt.Color(255, 255, 0));
+        jButtonLimpar.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        jButtonLimpar.setForeground(new java.awt.Color(255, 51, 51));
+        jButtonLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jonathan-Rey-Star-Wars-Characters-Vader-03.48.png"))); // NOI18N
+        jButtonLimpar.setText("LIMPAR");
+        jButtonLimpar.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jButtonLimparFocusGained(evt);
+            }
+        });
+        jButtonLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLimparActionPerformed(evt);
+            }
+        });
+
+        jLabelMostra.setEnabled(false);
+
+        jButtonSair.setBackground(new java.awt.Color(255, 255, 51));
+        jButtonSair.setFont(new java.awt.Font("Arial Black", 3, 14)); // NOI18N
+        jButtonSair.setForeground(new java.awt.Color(255, 51, 0));
+        jButtonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gartoon-Team-Gartoon-Action-Dialog-ok.48.png"))); // NOI18N
+        jButtonSair.setText("SAIR");
+        jButtonSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSairActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(101, 101, 101)
-                .addComponent(JnameTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(34, 122, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(143, 143, 143)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(133, 133, 133)
+                        .addComponent(JnameTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(76, 76, 76)
+                        .addComponent(jButtonEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(61, 61, 61)
+                        .addComponent(jButtonLimpar)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jLabelMostra, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
+                .addComponent(jButtonSair)
+                .addGap(39, 39, 39))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(JnameTitulo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonEnviar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addContainerGap(9, Short.MAX_VALUE))
+                    .addComponent(jLabel1)
+                    .addComponent(jTextFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButtonEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
+                        .addComponent(jLabelMostra, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonSair, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(14, 14, 14))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEnviarActionPerformed
-        // TODO add your handling code here:
+
+        jLabelMostra.setEnabled(true);
+        jLabelMostra.setText("Enviado com sucesso o seu nome: " + jTextFieldNome.getText());
+// TODO add your handling code here:
     }//GEN-LAST:event_jButtonEnviarActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jTextFieldNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNomeActionPerformed
+        
+// TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldNomeActionPerformed
+
+    private void jButtonLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimparActionPerformed
+
+        jTextFieldNome.setText(null); 
+             
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButtonLimparActionPerformed
+
+    private void jButtonLimparFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jButtonLimparFocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jButtonLimparFocusGained
+
+    private void jButtonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSairActionPerformed
+dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonSairActionPerformed
 
     /**
      * @param args the command line arguments
@@ -145,7 +216,10 @@ public class NewJFormulario1 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel JnameTitulo;
     private javax.swing.JButton jButtonEnviar;
+    private javax.swing.JButton jButtonLimpar;
+    private javax.swing.JButton jButtonSair;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel jLabelMostra;
+    private javax.swing.JTextField jTextFieldNome;
     // End of variables declaration//GEN-END:variables
 }
